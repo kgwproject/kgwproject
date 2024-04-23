@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --WarnaTeksUtama: #232e35 ;
+    --WarnaTeksKedua: #656d72 ;
+
+    --WarnaBingkai: #f1f1f1 ;
+    --WarnaGaris: #d9d9d9 ;
+
+    --WarnaBackgroundUtama: #fff ;
+    --WarnaBackgroundKedua: #fcf7f7 ;
+    --WarnaBackgroundKetiga: #f5f3fe ;
+
+    --WarnaIconUtama: #7e74f1 ;
+    --WarnaIconHoverUtama: #5d51e8 ;
+
+    --SectionPadding: 6rem 0;
+    
+    --ItemBorderRadius: 0.7rem ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto" , sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+    color: var(--WarnaTeksUtama) ;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+p, span, label, input, textarea, li {
+    color: var(--WarnaTeksKedua);
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container{
+        width: 90%;
+    }
+}
+
+
+/* logo and navigation menu */
+.nav {
+    display: flex ;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a {
+    color: var(--WarnaTeksUtama);
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--WarnaTeksUtama); 
+}
+
+
+/* buttons*/
+.btn {
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 1.5px solid var(--WarnaBingkai);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.04 ) 0px 3px 5px;
+}
+
+
+/* burger */
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 7px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+.burger {
+    display: none; 
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+
+/* hero */
+#hero {
+    background-color: var(--WarnaBackgroundUtama);
+    height:720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+.hero-name span {
+    color: rgb(80, 79, 79);
+
+}
+
+.hero-kanan img {
+    width: 50%;
+    border-radius: 1000px;
+}
+
+.hero-kanan {
+    display: flex;
+    justify-content: center;
+}
+
+/* pre title */
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: var(--WarnaTeksKedua);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--WarnaGaris);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+
+/* services */
+#services {
+    background-color: var(--WarnaBackgroundKedua);
+    padding: var(--SectionPadding);
+}
+
+.service .pre-title {
+    margin: 0 auto;
+}
+
+.services-title {
+    text-align: center;
+}
+
+.services {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--WarnaBackgroundUtama);
+    border-radius: var(--ItemBorderRadius);
+    margin: 5rem;
+}
+
+.service h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.service-icon {
+    background-color: var(--WarnaBackgroundKetiga);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.3rem;
+}
+
+.service-icon svg {
+    fill: var(--WarnaIconUtama);
+}
+
+/* title */
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
+/* grid */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5rem;
+}
+
+/* portfolio */
+#portfolio {
+    padding: var(--SectionPadding);
+}
+
+.portfolio {
+    border-radius: var(--ItemBorderRadius);
+    overflow: hidden;
+    border: 1px solid var(--WarnaBingkai);
+}
+
+.laptopjpg {
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.hpjpeg {
+    width: 100%;
+    object-fit: cover;
+}
+
+.portfolio-info {
+    padding: 2rem 1.5rem;
+}
+
+.portfolio-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.portfolio h4 {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.portfolio-title a svg:hover {
+    fill: var(--WarnaTeksUtama);
+}
+
+.portfolio-title a svg {
+    transition: 0.2s ease-in-out;
+}
+
+
+/* education */
+#education {
+    padding: var(--SectionPadding);
+    background: var(--WarnaBackgroundKedua);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.education-kiri {
+    display: flex;
+    gap: 2rem;
+}
+
+.education-kiri .line {
+    padding: 0 0.7rem;
+}
+
+.education-kiri .line div {
+    width: 2px;
+    height: 100%;
+    background: var(--WarnaBingkai);
+    position: relative;
+}
+
+.education-tahun {
+    margin-bottom: 3rem;
+}
+
+
+/* line dot */
+.education-kiri .line div:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: var(--WarnaBingkai);
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+
+
+/* contact */
+#contact {
+    padding: var(--SectionPadding);
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.contact-from div {
+    margin-bottom: 1.4rem;
+}
+
+.contact-from input, .contact-from textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: var(--WarnaBackgroundKedua);
+    border: 1px solid var(--WarnaBingkai);
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-from input::placeholder, .contact-from textarea::placeholder {
+    color: #9d9fa1;
+}
+
+.contact-from input:focus, .contact-from textarea:focus {
+    outline-color: #7d7d7d;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.75px 1.3rem;
+    background-color: var(--WarnaIconUtama);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background: var(--WarnaIconHoverUtama);
+}
+
+.contact-item-icon {
+    background-color: var(--WarnaBackgroundKetiga);
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item-icon svg {
+    fill: var(--WarnaIconUtama);
+}
+
+.contact-item-detail h4 {
+    margin-bottom: 0.6rem;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
